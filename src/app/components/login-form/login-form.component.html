@@ -1,0 +1,9 @@
+<ion-card>
+  <form #f="ngForm" (ngSubmit)="onLogin(f)" novalidate>
+    <ion-input label="Email" type="email" name="email" [(ngModel)]="email" required />
+    <br>
+    <ion-input label="Password" type="password" name="password" [(ngModel)]="password" required />
+
+    <ion-button type="submit">Login</ion-button>
+  </form>
+</ion-card>
