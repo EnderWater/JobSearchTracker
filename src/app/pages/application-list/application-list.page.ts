@@ -23,20 +23,20 @@ export class ApplicationListPage implements OnInit {
   constructor(public supabaseService: SupabaseService) { }
 
   ngOnInit() {
-    this.loadTestApplications();
+    // this.loadTestApplications();
     
     // Get the applications from supabase
-    // this.supabaseService.getApplications().subscribe(() => {
-    //   // Iterate over each of the applications and turn them into ListItems for rendering
-    //   this.supabaseService.applicationList().forEach((application) => {
-    //     let newListItem: ListItem = {
-    //       title: application.company.name,
-    //       subtitle: application.applicationStatus.applicationStatusId.toString(),
-    //       isActive: true
-    //     }
-    //     this.applicationsList.push(newListItem);
-    //   })
-    // })
+    this.supabaseService.getApplications().subscribe(() => {
+      // Iterate over each of the applications and turn them into ListItems for rendering
+      this.supabaseService.applicationList().forEach((application) => {
+        let newListItem: ListItem = {
+          title: application.company.name,
+          subtitle: application.applicationStatus.applicationStatusId.toString(),
+          isActive: true
+        }
+        this.applicationsList.push(newListItem);
+      })
+    })
   }
 
   async loadTestApplications() {
