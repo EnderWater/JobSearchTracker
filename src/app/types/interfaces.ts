@@ -1,4 +1,5 @@
-import { ApplicationStatusEnum } from "../enums/enums";
+import { ApplicationStatusEnum } from "./enums";
+import { ApplicationStatusName, ionicColor } from "./types";
 
 export interface ListItem {
   title?: string;
@@ -7,6 +8,7 @@ export interface ListItem {
   date?: Date | string;
   route?: string;  // optional navigation link
   isActive: boolean;
+  color: ionicColor;
 }
 
 export interface Application {
@@ -19,7 +21,7 @@ export interface Application {
 
 export interface ApplicationStatus {
     applicationStatusId: ApplicationStatusEnum;
-    name: string;
+    name: ApplicationStatusName;
     color: string;
     sortOrder: number;
     createDate: Date;

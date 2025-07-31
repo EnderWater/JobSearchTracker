@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { ListComponent } from "src/app/components/list/list.component";
 import { SupabaseService } from 'src/app/services/supabase/supabase.service';
 import { ListItem } from 'src/app/types/interfaces';
-import { AddApplicationComponent } from "src/app/add-application/add-application.component";
+import { AddApplicationComponent } from 'src/app/components/add-application/add-application.component';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-application-list',
@@ -23,20 +24,23 @@ export class ApplicationListPage implements OnInit {
   constructor(public supabaseService: SupabaseService) { }
 
   ngOnInit() {
-    // this.loadTestApplications();
-    
-    // Get the applications from supabase
-    this.supabaseService.getApplications().subscribe(() => {
-      // Iterate over each of the applications and turn them into ListItems for rendering
-      this.supabaseService.applicationList().forEach((application) => {
-        let newListItem: ListItem = {
-          title: application.company.name,
-          subtitle: application.applicationStatus.applicationStatusId.toString(),
-          isActive: true
-        }
-        this.applicationsList.push(newListItem);
+    if (environment.production) {
+      // Get the applications from supabase
+      this.supabaseService.getApplications().subscribe(() => {
+        // Iterate over each of the applications and turn them into ListItems for rendering
+        this.supabaseService.applicationList().forEach((application) => {
+          let newListItem: ListItem = {
+            title: application.company.name,
+            date: application.submissionDate,
+            isActive: true,
+            color: application.applicationStatus?.name
+          }
+          this.applicationsList.push(newListItem);
+        })
       })
-    })
+    }
+    else
+      this.loadTestApplications();
   }
 
   async loadTestApplications() {

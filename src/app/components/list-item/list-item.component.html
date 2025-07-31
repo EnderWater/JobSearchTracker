@@ -1,8 +1,8 @@
 <button class="w-full" (click)="onClick()">
-  <ion-card class="relative">
+  <ion-card class="relative" color="{{this.listItem.color.toString()}}">
     <ion-card-header>
-      <ion-card-title>{{ listItem.title }}</ion-card-title>
       <ion-card-subtitle>{{ listItem.subtitle }}</ion-card-subtitle>
+      <ion-card-title>{{ listItem.title }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <p>Applied: {{ listItem.date?.toLocaleString() }}</p>

@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { IonButton } from "@ionic/angular/standalone";
-import { SupabaseService } from '../services/supabase/supabase.service';
+import { SupabaseService } from 'src/app/services/supabase/supabase.service';
 
 @Component({
   selector: 'app-add-application',

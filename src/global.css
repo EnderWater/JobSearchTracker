@@ -41,4 +41,29 @@
 :root {
     --ion-color-primary: #272838;
     --ion-color-secondary: #5D536B;
+    --ion-color-applied: yellow;
+    --ion-color-interview: blue;
+    --ion-color-rejected: red;
+    --ion-color-ghosted: white;
+    --ion-color-hired: green;
+}
+
+.ion-color-applied {
+    --ion-color-base: var(--ion-color-applied) !important;
+}
+
+.ion-color-interview {
+    --ion-color-base: var(--ion-color-interview) !important;
+}
+
+.ion-color-rejected {
+    --ion-color-base: var(--ion-color-rejected) !important;
+}
+
+.ion-color-ghosted {
+    --ion-color-base: var(--ion-color-ghosted) !important;
+}
+
+.ion-color-hired {
+    --ion-color-base: var(--ion-color-hired) !important;
 }

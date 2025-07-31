@@ -2,51 +2,61 @@
   {
     "title": "Acme Corp",
     "date": "2025-07-31T08:23:00Z",
-    "isActive": true
+    "isActive": true,
+    "color": "applied"
   },
   {
     "title": "Globex Inc.",
     "date": "2025-07-30T15:45:00Z",
-    "isActive": true
+    "isActive": true,
+    "color": "applied"
   },
   {
     "title": "Soylent Systems",
     "date": "2025-07-29T12:10:00Z",
-    "isActive": true
+    "isActive": true,
+    "color": "hired"
   },
   {
     "title": "Initech",
     "date": "2025-07-28T09:30:00Z",
-    "isActive": true
+    "isActive": true,
+    "color": "rejected"
   },
   {
     "title": "Umbrella Corp",
     "date": "2025-07-27T17:05:00Z",
-    "isActive": true
+    "isActive": true,
+    "color": "ghosted"
   },
   {
     "title": "Stark Industries",
     "date": "2025-07-26T11:00:00Z",
-    "isActive": true
+    "isActive": true,
+    "color": "applied"
   },
   {
     "title": "Wayne Enterprises",
     "date": "2025-07-25T14:15:00Z",
-    "isActive": true
+    "isActive": true,
+    "color": "applied"
   },
   {
     "title": "Aperture Science",
     "date": "2025-07-31T10:50:00Z",
-    "isActive": true
+    "isActive": true,
+    "color": "ghosted"
   },
   {
     "title": "Wonka Industries",
     "date": "2025-07-29T07:40:00Z",
-    "isActive": true
+    "isActive": true,
+    "color": "applied"
   },
   {
     "title": "Cyberdyne Systems",
     "date": "2025-07-30T13:20:00Z",
-    "isActive": true
+    "isActive": true,
+    "color": "hired"
   }
 ]
