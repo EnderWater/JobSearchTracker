@@ -1,24 +1,13 @@
-import { Injectable } from '@angular/core';
-import { createClient } from "@supabase/supabase-js";
-import { from, map, Observable } from 'rxjs';
+import { Injectable, signal } from '@angular/core';
+import { from, map, Observable, tap } from 'rxjs';
 import { Application } from 'src/app/types/interfaces';
-import { environment } from 'src/environments/environment.development';
+import { supabase } from './supabaseClient';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SupabaseService {
-  supabase = createClient(
-    environment.supabaseUrl,
-    environment.supabaseKey,
-    {
-      auth: {
-        persistSession: true,
-        autoRefreshToken: true,
-        detectSessionInUrl: true,
-      }
-    }
-  );
+  public applicationList = signal<Application[]>([]);
 
   recursiveToCamel(item: any): any {
     if (Array.isArray(item)) {
@@ -35,11 +24,18 @@ export class SupabaseService {
   };
 
   getApplications(): Observable<Application[]> {
-    const promise = this.supabase.from('application_view').select('*');
+    const promise = supabase.from('application_view').select('*');
     return from(promise).pipe(
       map((response) => {
+        // The data comes back in the form xxx_xxx
         return this.recursiveToCamel(response.data) ?? []
-      })
+      }),
+      tap(applications => this.applicationList.set(applications))
+      // I need to set the response data to this.applicationList which is a Signal<Application[]>
     );
+  }
+
+  addApplication() {
+    console.log("Running addApplication");
   }
 }

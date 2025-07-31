@@ -1,9 +1,17 @@
 <ion-app>
-  <app-header></app-header>
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-title>Job Application Tracker</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <ion-content class="ion-padding">
-    <app-login></app-login>
+  <ion-content class="ion-padding" color="primary">
+    <router-outlet></router-outlet>
   </ion-content>
   
-  <app-footer></app-footer>
+  <ion-footer>
+    <ion-toolbar color="secondary">
+      <ion-title>Footer</ion-title>
+    </ion-toolbar>
+  </ion-footer>
 </ion-app>

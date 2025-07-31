@@ -1,23 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ListItemComponent } from '../list-item/list-item.component';
-import { Application, ListDataService } from '../../services/list-data-service/list-data.service';
-import { SupabaseService } from 'src/app/services/supabase/supabase.service';
+import { ListItem } from 'src/app/types/interfaces';
 
 @Component({
   selector: 'app-list',
   standalone: true,
   imports: [ListItemComponent],
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss'],
+  styleUrls: ['./list.component.css'],
 })
-export class ListComponent  implements OnInit {
-  public listItems: Application[] = [];
+export class ListComponent implements OnInit {
 
-  constructor(private supabaseService: SupabaseService) { }
+  @Input()
+  listItems!: ListItem[]
+
+  constructor() { }
 
   ngOnInit() {
-    this.supabaseService.getApplications().subscribe((data) => {
-      this.listItems = data;
-    })
+
   }
 }

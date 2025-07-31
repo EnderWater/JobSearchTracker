@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Acme Corp",
+    "date": "2025-07-31T08:23:00Z",
+    "isActive": true
+  },
+  {
+    "title": "Globex Inc.",
+    "date": "2025-07-30T15:45:00Z",
+    "isActive": true
+  },
+  {
+    "title": "Soylent Systems",
+    "date": "2025-07-29T12:10:00Z",
+    "isActive": true
+  },
+  {
+    "title": "Initech",
+    "date": "2025-07-28T09:30:00Z",
+    "isActive": true
+  },
+  {
+    "title": "Umbrella Corp",
+    "date": "2025-07-27T17:05:00Z",
+    "isActive": true
+  },
+  {
+    "title": "Stark Industries",
+    "date": "2025-07-26T11:00:00Z",
+    "isActive": true
+  },
+  {
+    "title": "Wayne Enterprises",
+    "date": "2025-07-25T14:15:00Z",
+    "isActive": true
+  },
+  {
+    "title": "Aperture Science",
+    "date": "2025-07-31T10:50:00Z",
+    "isActive": true
+  },
+  {
+    "title": "Wonka Industries",
+    "date": "2025-07-29T07:40:00Z",
+    "isActive": true
+  },
+  {
+    "title": "Cyberdyne Systems",
+    "date": "2025-07-30T13:20:00Z",
+    "isActive": true
+  }
+]

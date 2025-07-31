@@ -1,17 +1,26 @@
 import { Component } from '@angular/core';
-import { IonApp, IonContent } from '@ionic/angular/standalone';
-import { ListComponent } from './components/list/list.component';
-import { HeaderComponent } from "./components/header/header.component";
-import { FooterComponent } from "./components/footer/footer.component";
-import { LoginComponent } from "./pages/login/login.component";
+import { IonApp, IonContent, IonHeader, IonFooter, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { FormsModule } from '@angular/forms';
-import { LoginFormComponent } from './components/login-form/login-form.component';
+import { RouterOutlet } from '@angular/router';
+import { addIcons } from 'ionicons';
+import { arrowForwardOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [IonContent, IonApp, ListComponent, HeaderComponent, FooterComponent, LoginComponent, FormsModule],
+  imports: [IonContent, 
+    IonApp, 
+    FormsModule,
+    RouterOutlet,
+    IonHeader,
+    IonFooter,
+    IonTitle,
+    IonToolbar,
+  ],
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+    // Add the ionic icons so they can be used in the app
+    addIcons({ arrowForwardOutline });
+  }
 }

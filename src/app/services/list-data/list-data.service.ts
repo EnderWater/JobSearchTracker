@@ -14,5 +14,3 @@ export class ListDataService {
     return this.http.get<Application[]>('assets/list-data.json');
   }
 }
-export { Application };
-

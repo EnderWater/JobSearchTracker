@@ -1,3 +1,5 @@
-@for (item of listItems; track $index) {
-  <app-list-item [application]="item"></app-list-item>
-}
+<div class="flex flex-col items-center my-2 h-fit">
+  @for (item of listItems; track $index) {
+    <app-list-item [listItem]="item" class="item-list text-center w-11/12 m-1"></app-list-item>
+  }
+</div>
