@@ -1,4 +1,10 @@
 <div class="w-full h-full">
-  <app-add-application></app-add-application>
+  <!-- Must have an id of open-modal to open the app-modal -->
+  <ion-button color="secondary" shape="round" class="py-2 max-w-fit" id="open-modal" expand="block">
+    New Application
+  </ion-button>
   <app-list [listItems]="applicationsList"></app-list>
+  <app-modal>
+    <app-form></app-form>
+  </app-modal>
 </div>

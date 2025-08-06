@@ -1,11 +1,19 @@
 import { ApplicationStatusEnum } from "./enums";
 import { ApplicationStatusName, ionicColor } from "./types";
 
+export interface FormItem {
+    label?: string;
+    placeholder?: string;
+    value?: any;
+    readonly: boolean;
+    disabled: boolean;
+}
+
 export interface ListItem {
   title?: string;
   subtitle?: string;
   icon?: string; // e.g. ion-icon name or URL
-  date?: Date | string;
+  date?: string;
   route?: string;  // optional navigation link
   isActive: boolean;
   color: ionicColor;

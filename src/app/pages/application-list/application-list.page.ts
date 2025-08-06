@@ -4,19 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { ListComponent } from "src/app/components/list/list.component";
 import { SupabaseService } from 'src/app/services/supabase/supabase.service';
 import { ListItem } from 'src/app/types/interfaces';
-import { AddApplicationComponent } from 'src/app/components/add-application/add-application.component';
 import { environment } from 'src/environments/environment.development';
+import { IonButton } from "@ionic/angular/standalone";
+import { ModalComponent } from "src/app/components/modal/modal.component";
+import { FormComponent } from "src/app/components/form/form.component";
 
 @Component({
   selector: 'app-application-list',
   templateUrl: './application-list.page.html',
   styleUrls: ['./application-list.page.css'],
   standalone: true,
-  imports: [CommonModule, 
-    FormsModule, 
-    ListComponent, 
-    ListComponent, 
-    AddApplicationComponent]
+  imports: [IonButton, CommonModule,
+    FormsModule,
+    ListComponent,
+    ListComponent, ModalComponent, FormComponent]
 })
 export class ApplicationListPage implements OnInit {
   public applicationsList: ListItem[] = [];
