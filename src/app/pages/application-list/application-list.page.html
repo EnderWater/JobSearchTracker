@@ -4,7 +4,7 @@
     New Application
   </ion-button>
   <app-list [listItems]="applicationsList"></app-list>
-  <app-modal>
-    <app-form></app-form>
+  <app-modal [modalTitle]="modalTitle">
+      <app-form [formItems]="formItemList"></app-form>
   </app-modal>
 </div>

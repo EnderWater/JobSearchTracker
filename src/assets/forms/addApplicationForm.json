@@ -1,0 +1,42 @@
+[
+    {
+        "label":"Company Name",
+        "labelPlacement":"stacked",
+        "placeholder": "",
+        "value": "",
+        "readonly": false,
+        "disabled": false,
+        "clearInput": false,
+        "clearOnEdit": false
+    },
+    {
+        "label":"Company Address",
+        "labelPlacement":"stacked",
+        "placeholder": "",
+        "value": "",
+        "readonly": false,
+        "disabled": false,
+        "clearInput": false,
+        "clearOnEdit": false
+    },
+    {
+        "label":"Date",
+        "labelPlacement":"stacked",
+        "placeholder": "",
+        "value": "",
+        "readonly": false,
+        "disabled": false,
+        "clearInput": false,
+        "clearOnEdit": false
+    },
+    {
+        "label":"Position",
+        "labelPlacement":"stacked",
+        "placeholder": "",
+        "value": "",
+        "readonly": false,
+        "disabled": false,
+        "clearInput": false,
+        "clearOnEdit": false
+    }
+]

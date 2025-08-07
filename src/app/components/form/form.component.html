@@ -1,0 +1,19 @@
+<div class="pt-12">
+  <ion-list>
+    @for (item of formItems(); track $index) {
+      <ion-item>
+        <ion-input
+          label="{{item.label}}"
+          labelPlacement="{{item.labelPlacement}}"
+          placeholder="{{item.placeholder}}"
+          value="{{item.value}}"
+          readonly="{{item.readonly}}"
+          disabled="{{item.disabled}}"
+          clearInput="{{item.clearInput}}"
+          clearOnEdit="{{item.clearOnEdit}}"
+        ></ion-input>
+        <input [formControl]="this.formControls[$index]">
+      </ion-item>
+    }
+  </ion-list>
+</div>

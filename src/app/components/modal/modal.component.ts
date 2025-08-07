@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, signal, ViewChild } from '@angular/core';
 import { IonModal, IonHeader, IonButtons, IonToolbar, IonButton, IonTitle, IonContent, IonItem, IonAvatar, IonImg, IonLabel, IonList, IonInput } from "@ionic/angular/standalone";
 import { OverlayEventDetail } from '@ionic/core/components';
 
@@ -27,6 +27,9 @@ export class ModalComponent  implements OnInit {
   // Leave it to whatever component is using the modal to determine the type that will be returned
   modalData: any;
 
+  @Output()
+  modalDataEmitter = new EventEmitter<any>();
+
   message: string = '';
 
   constructor() { }
@@ -36,7 +39,9 @@ export class ModalComponent  implements OnInit {
   onWillDismiss(event: CustomEvent<OverlayEventDetail>) {
     if (event.detail.role === 'confirm') {
       this.message = `Hello, ${event.detail.data}!`;
+      this.modalData = event.detail.data;
     }
+    this.modalData.emit(this.modalData);
   }
 
   confirm() {

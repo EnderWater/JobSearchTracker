@@ -6,8 +6,13 @@ export type ionicColor = 'primary'
     | 'ghosted' 
     | 'hired';
 
-export type ApplicationStatusName = 'applied' 
+export type applicationStatusName = 'applied' 
     | 'interview' 
     | 'rejected' 
     | 'ghosted' 
     | 'hired';
+
+export type ionicItemLabelPlacement = ''
+    | 'fixed'
+    | 'stacked'
+    | 'floating';

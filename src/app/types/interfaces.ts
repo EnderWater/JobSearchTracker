@@ -1,12 +1,15 @@
-import { ApplicationStatusEnum } from "./enums";
-import { ApplicationStatusName, ionicColor } from "./types";
+import { applicationStatusEnum } from "./enums";
+import { applicationStatusName, ionicColor, ionicItemLabelPlacement } from "./types";
 
 export interface FormItem {
-    label?: string;
+    label: string;
+    labelPlacement: ionicItemLabelPlacement;
     placeholder?: string;
     value?: any;
     readonly: boolean;
     disabled: boolean;
+    clearInput: boolean;
+    clearOnEdit: boolean;
 }
 
 export interface ListItem {
@@ -22,14 +25,14 @@ export interface ListItem {
 export interface Application {
     applicationId: number;
     company: Company;
-    applicationStatus: ApplicationStatus;
+    applicationStatus: applicationStatus;
     submissionDate: string;
     responseDate?: string;
 }
 
-export interface ApplicationStatus {
-    applicationStatusId: ApplicationStatusEnum;
-    name: ApplicationStatusName;
+export interface applicationStatus {
+    applicationStatusId: applicationStatusEnum;
+    name: applicationStatusName;
     color: string;
     sortOrder: number;
     createDate: Date;
